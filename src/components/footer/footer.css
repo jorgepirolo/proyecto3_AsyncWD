@@ -1,0 +1,41 @@
+.footy {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  bottom: 3%;
+  right: 2%;
+  background-color: var(--JP-lightorange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px -1px rgba(40, 54, 24, 0.6);
+  z-index: 999;
+}
+
+.inte {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  color: var(--JP-darkgreen);
+  font-weight: 800;
+}
+
+.footy:hover {
+  box-shadow: inset 0px 0px 200px 0px rgba(40, 54, 24, 0.6);
+  transition: 5s;
+}
+
+.footy:hover > .inte {
+  color: var(--JP-lightorange);
+  transition: 0.3s;
+}
+
+@media (max-width: 800px) {
+  .footy {
+    right: 5%;
+  }
+}

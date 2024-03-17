@@ -1,0 +1,45 @@
+.button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:focus {
+  background-color: var(--JP-darkorange);
+  color: var(--JP-creamwhite);
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.saveblur {
+  background-color: var(--JP-darkorange);
+  color: var(--JP-creamwhite);
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  right: -70%;
+  top: 3%;
+  font-size: 1rem;
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .saveblur {
+    padding: 6px 5px;
+    font-size: 1rem;
+    right: -70%;
+    top: 3%;
+  }
+}
+
+@media (max-width: 550px) {
+  .saveblur {
+    right: -60%;
+    font-size: 0.8rem;
+    top: 5%;
+  }
+}

@@ -1,0 +1,160 @@
+:root {
+  --JP-lightgreen: #606c38;
+  --JP-darkgreen: #283618;
+  --JP-creamwhite: #fefae0;
+  --JP-lightorange: #dda15e;
+  --JP-darkorange: #bc6c25;
+  --JP-blacktext: #111111;
+  --JP-greyplaceholder: #767676;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--JP-creamwhite);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+nav {
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--JP-creamwhite);
+  top: 0;
+  z-index: 999;
+}
+
+.pics {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+#results {
+  padding: 100px 50px 50px 50px;
+  columns: auto 300px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: var(--JP-darkorange);
+  font-size: 1.1rem;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  margin-top: 40px;
+  position: absolute;
+}
+
+.blur {
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+}
+
+.blur:hover {
+  box-shadow: inset 0px 0px 200px 0px rgba(40, 54, 24, 0.6);
+  cursor: zoom-in;
+  transition: 0.1s;
+}
+
+.blur:hover > .saveblur {
+  display: block;
+}
+
+.container {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.share,
+.more {
+  background-color: var(--JP-creamwhite);
+  position: absolute;
+  bottom: 5%;
+  right: 18%;
+  border-radius: 100%;
+  padding: 10px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  justify-content: center;
+  display: none;
+}
+.more {
+  right: 5%;
+}
+
+.blur:hover > .share {
+  display: flex;
+}
+.blur:hover > .more {
+  display: flex;
+}
+
+.moreicn {
+  rotate: 90deg;
+}
+
+@media (max-width: 720px) {
+  nav {
+    padding: 1rem 1rem 4rem 1rem;
+  }
+  #results {
+    padding: 130px 10px 50px 10px;
+    columns: 2 100px;
+    gap: 10px;
+  }
+  .container {
+    margin-bottom: 10px;
+  }
+
+  .more {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+  }
+  .share {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    right: 18%;
+  }
+}
+
+@media (max-width: 550px) {
+  .share {
+    right: 22%;
+    width: 25px;
+    height: 25px;
+  }
+  .more {
+    width: 25px;
+    height: 25px;
+  }
+}

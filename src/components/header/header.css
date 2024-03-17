@@ -1,0 +1,72 @@
+.logo {
+  height: 40px;
+}
+
+.gap {
+  gap: 20px;
+}
+
+.icono:hover {
+  cursor: pointer;
+}
+
+input {
+  background-color: var(--JP-lightgreen);
+  padding: 15px 0px 15px 50px;
+  border-radius: 20px;
+  border: none;
+  margin: 0 30px;
+  min-width: 300px;
+  width: 100%;
+  color: var(--JP-creamwhite);
+  font-size: 1.1rem;
+}
+
+input::placeholder {
+  color: var(--JP-creamwhite);
+  font-size: 1.1rem;
+}
+
+.grow {
+  width: 100%;
+  position: relative;
+}
+
+.lupa {
+  position: absolute;
+  left: 45px;
+  height: 40%;
+  filter: invert(100%);
+}
+
+@media (max-width: 890px) {
+  .inicio,
+  .explorar,
+  .crear {
+    display: none;
+  }
+  input {
+    margin: 0 1rem 0 0;
+    width: 100%;
+  }
+  .lupa {
+    position: absolute;
+    left: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .grow {
+    position: absolute;
+    left: 0;
+    padding: 0 0 0 1rem;
+    top: 70px;
+  }
+  input {
+    width: 100%;
+    padding: 10px 0px 10px 50px;
+  }
+  .lupa {
+    left: 35px;
+  }
+}
